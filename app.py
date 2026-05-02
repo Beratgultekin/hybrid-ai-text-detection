@@ -149,7 +149,7 @@ def predict():
             'error': 'The text is too short. Please enter a text with at least 20 words for a reliable AI detection.'
         }), 400
         
-    # --- LANGUAGE DETECTION ---
+    # ---- LANGUAGE DETECTION ----
     try:
         langs = detect_langs(text)
         is_english = False
