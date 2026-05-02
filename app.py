@@ -14,7 +14,7 @@ if platform.system() == 'Windows':
 
 app = Flask(__name__)
 
-# --- MODEL DEFINITIONS ---
+# ---- MODEL DEFINITIONS ----
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
@@ -142,7 +142,7 @@ def predict():
     if not text:
         return jsonify({'error': 'Please enter a text to analyze.'}), 400
         
-    # --- LENGTH CHECK ---
+    # ---- LENGTH CHECK ----
     words = text.split()
     if len(words) < 20:
         return jsonify({
