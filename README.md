@@ -82,10 +82,10 @@ Our hybrid framework operates in a sophisticated two-stage pipeline, maximizing 
 
 ---
 
-👥 Team
+## 👥 Team
+
 Project Team: EmreTYucel Beratgultekin nisanurrkarduz
 
-> *(Citation details to be added upon publication)*
 
 ## 📄 License
 This project is licensed under the MIT License.
