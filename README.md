@@ -57,10 +57,8 @@ Our hybrid framework operates in a sophisticated two-stage pipeline, maximizing 
    pip install torch transformers pandas autogluon.tabular flask langdetect catboost lightgbm xgboost fastai
    ```
 
-3. **Download Model Weights (Important):**
-   Due to GitHub's file size limits, the pre-trained model weights are hosted externally. Download them from the link below and place them in the root directory:
-   - [Download Model Weights (Google Drive)](#) *(Link will be added soon)*
-   - Extract the contents so that `roberta_multitask_state_dict.pt` and `Label_Model_Final/` are in the main folder.
+3. **Model Weights (Proprietary):**
+   Please note that the pre-trained model weights (`roberta_multitask_state_dict.pt` and `Label_Model_Final/`) are proprietary and are not included in this public repository. The source code is provided for methodological review and academic transparency.
 
 4. **Run the Application:**
    Start the local Flask server.
