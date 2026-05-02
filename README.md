@@ -82,8 +82,8 @@ Our hybrid framework operates in a sophisticated two-stage pipeline, maximizing 
 
 ---
 
-## 📝 Academic Citation
-If you use this codebase, methodology, or model in your academic research, please consider citing our forthcoming paper:
+👥 Team
+Project Team: EmreTYucel Beratgultekin nisanurrkarduz
 
 > *(Citation details to be added upon publication)*
 
