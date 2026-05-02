@@ -1,0 +1,27 @@
+# --- MODEL FILES (Too large for GitHub) ---
+# Files larger than 100MB cannot be pushed to GitHub.
+# Upload these files to Google Drive or HuggingFace and link them in the README.
+Label_Model_Final/
+*.pt
+*.pth
+*.pkl
+*.h5
+*.bin
+
+# --- PYTHON AND ENVIRONMENTS (VENV) ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.venv/
+
+# --- FLASK ---
+instance/
+.webassets-cache
+flask_session/
+
+# --- OPERATING SYSTEM FILES ---
+.DS_Store
+Thumbs.db

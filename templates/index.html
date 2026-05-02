@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Analysis Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sol Panel: Girdi Alanı -->
+        <div class="panel left-panel">
+            <h2 class="panel-title">Paste Text to Analyze Here</h2>
+            <textarea id="textInput" placeholder="Modern AI models are highly successful at generating text. However, detecting these texts is critical for academic integrity... Please enter an English text."></textarea>
+            
+            <div class="action-area">
+                <div class="button-group">
+                    <button id="clearBtn" class="btn btn-secondary" onclick="clearText()">CLEAR TEXT</button>
+                    <button id="analyzeBtn" class="btn btn-primary" onclick="analyzeText()">ANALYZE TEXT</button>
+                </div>
+                <div id="loading" class="status-msg loading-msg hidden">
+                    <span class="spinner"></span> Analyzing, model is running...
+                </div>
+                <div id="errorMessage" class="status-msg error-msg hidden"></div>
+            </div>
+        </div>
+
+        <!-- Sağ Panel: Sonuç Alanı -->
+        <div class="panel right-panel">
+            <h2 class="panel-title results-title">ANALYSIS RESULTS</h2>
+            
+            <div class="results-layout">
+                <!-- AI Probability Card -->
+                <div class="card prob-card">
+                    <h3 class="card-title">AI PROBABILITY</h3>
+                    <div class="prob-content">
+                        <div class="circular-progress" id="progressCircle">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="progress" cx="60" cy="60" r="50" id="progressFill"></circle>
+                            </svg>
+                        </div>
+                        <div class="prob-text">
+                            <span class="percentage" id="percentageText">%0.0</span>
+                            <span class="prob-label">Confidence Level</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Decision Card -->
+                <div class="card decision-card" id="decisionCard">
+                    <h3 class="card-title">FINAL DECISION</h3>
+                    <div class="decision-content">
+                        <div class="decision-header">
+                            <div class="status-dot" id="statusDot"></div>
+                            <h2 class="decision-title" id="decisionTitle">WAITING</h2>
+                        </div>
+                        <p class="decision-desc" id="decisionDesc">Please enter a text on the left and click the analyze button.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
